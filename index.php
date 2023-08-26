@@ -41,33 +41,33 @@ session_start();
         </h1>
         <div class="row">
             <div class="city-card-container col-md">
-                <a href="property_list.php?city=Delhi">
+                <a href="property_list.php?city=Guna">
                     <div class="city-card rounded-circle">
-                        <img src="img/delhi.png" class="city-img" />
+                        <img src="img/GUNA.png" class="city-img" />
                     </div>
                 </a>
             </div>
 
             <div class="city-card-container col-md">
-                <a href="property_list.php?city=Mumbai">
+                <a href="property_list.php?city=Raghogarh">
                     <div class="city-card rounded-circle">
-                        <img src="img/mumbai.png" class="city-img" />
+                        <img src="img/RAGHOGARH.png" class="city-img" />
                     </div>
                 </a>
             </div>
 
             <div class="city-card-container col-md">
-                <a href="property_list.php?city=Bengaluru">
+                <a href="property_list.php?city=Sada Colony">
                     <div class="city-card rounded-circle">
-                        <img src="img/bangalore.png" class="city-img" />
+                        <img src="img/Sada Colony.png" class="city-img" />
                     </div>
                 </a>
             </div>
 
             <div class="city-card-container col-md">
-                <a href="property_list.php?city=Hyderabad">
+                <a href="property_list.php?city=Others">
                     <div class="city-card rounded-circle">
-                        <img src="img/hyderabad.png" class="city-img" />
+                        <img src="img/OTHERS.png" class="city-img" />
                     </div>
                 </a>
             </div>
