@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 20, 2022 at 08:49 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- Host: 127.0.0.1:3308
+-- Generation Time: Nov 30, 2023 at 07:18 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,7 +32,7 @@ CREATE TABLE `amenities` (
   `name` varchar(150) NOT NULL,
   `type` varchar(150) NOT NULL,
   `icon` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `amenities`
@@ -62,7 +62,7 @@ INSERT INTO `amenities` (`id`, `name`, `type`, `icon`) VALUES
 CREATE TABLE `cities` (
   `id` int(11) NOT NULL,
   `name` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `cities`
@@ -84,7 +84,7 @@ CREATE TABLE `interested_users_properties` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `property_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `interested_users_properties`
@@ -120,22 +120,22 @@ CREATE TABLE `properties` (
   `rating_clean` float(2,1) NOT NULL,
   `rating_food` float(2,1) NOT NULL,
   `rating_safety` float(2,1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `properties`
 --
 
 INSERT INTO `properties` (`id`, `city_id`, `name`, `address`, `description`, `gender`, `rent`, `rating_clean`, `rating_food`, `rating_safety`) VALUES
-(1, 1, 'The Princess Girls Hostel And Paying Guest', 'Radha Colony, Ab Road, Radha Colony, Guna - 473001 (Behind Dena Bank)', 'Furnished studio apartment - share it with close friends! Located in posh area of Bijwasan in Delhi, this house is available for both boys and girls. Go for a private room or opt for a shared one and make it your own abode. Go out with your new friends - catch a movie at the nearest cinema hall or just chill in a cafe which is not even 2 kms away. Unwind with your flatmates after a long day at work/college. With a common living area and a shared kitchen, make your own FRIENDS moments. After all, there\'s always a Joey with unlimited supply of food. Remember, all it needs is one crazy story to convert a roomie into a BFF. What\'s nearby/Your New Neighborhood 4.0 Kms from Dwarka Sector- 21 Metro Station.', 'female', 5000, 4.3, 3.4, 4.8),
+(1, 1, 'The Princess Girls Hostel And Paying Guest', 'Radha Colony, Ab Road, Radha Colony, Guna - 473001 (Behind Dena Bank)', 'A girls\' hostel, also known as a women\'s dormitory or female residence hall, is a type of accommodation specifically designed to house female students or individuals in a communal living environment. These hostels serve various purposes, but their primary function is to provide a safe and convenient place for women to live while pursuing their education, career, or other endeavors. Here is a general description of what you might find in a girls\' hostel', 'female', 5000, 4.3, 3.4, 4.8),
 (2, 1, 'Pratap Chhatrawas', 'Guna, Madhya Pradesh, Karnal Ganj, Karnal Ganj, Guna - 473001', 'Furnished studio apartment - share it with close friends! Located in posh area of Bijwasan in Delhi, this house is available for both boys and girls. Go for a private room or opt for a shared one and make it your own abode. Go out with your new friends - catch a movie at the nearest cinema hall or just chill in a cafe which is not even 2 kms away. Unwind with your flatmates after a long day at work/college. With a common living area and a shared kitchen, make your own FRIENDS moments. After all, there\'s always a Joey with unlimited supply of food. Remember, all it needs is one crazy story to convert a roomie into a BFF. What\'s nearby/Your New Neighborhood 4.0 Kms from Dwarka Sector- 21 Metro Station.', 'unisex', 6000, 2.9, 3.4, 3.8),
 (3, 1, 'House For Rent', 'Gopalpur, Guna, Madhya Pradesh', 'House with 2 Bedrooms 1 kitchen 1 bathroom', 'unisex', 3500, 3.9, 3.8, 4.9),
-(4, 2, 'Dr. B R Ambedkar Hostel', 'G52J+PMW, Ajroda, Madhya Pradesh 473110, India', 'Dr. B R Ambedkar Hostel Raghogarh is a student housing center located in Ajroda, Madhya Pradesh. The average rating of this place is 3.90 out of 5 stars. The street address of this place is G52J+PMW, Ajroda, Madhya Pradesh 473110, India. It is about 1.89 kilometers away from the Radhogarh railway station.', 'male', 8000, 4.2, 4.1, 4.5),
-(5, 2, 'New Bachelor Hostel (NBH)', 'F563+CQ2, Gail Vijaipur, Vijaipur, Madhya Pradesh 473112, India', 'New Bachelor Hostel (NBH) is a lodging located in Vijaipur, Madhya Pradesh. The average rating of this place is 4.30 out of 5 stars. The street address of this place is F563+CQ2, Gail Vijaipur, Vijaipur, Madhya Pradesh 473112, India. It is about 1.56 kilometers away from the Radhogarh railway station.', 'male', 8500, 4.2, 3.9, 4.6);
+(4, 2, 'Dr. B R Ambedkar Hostel ', 'G52J+PMW, Ajroda, Madhya Pradesh 473110, India', 'Dr. B R Ambedkar Hostel Raghogarh is a student housing center located in Ajroda, Madhya Pradesh. The average rating of this place is 3.90 out of 5 stars. The street address of this place is G52J+PMW, Ajroda, Madhya Pradesh 473110, India. It is about 1.89 kilometers away from the Radhogarh railway station.', 'male', 8000, 4.2, 4.1, 4.5),
+(5, 2, 'New Bachelor Hostel (NBH)', 'F563+CQ2, Gail Vijaipur, Vijaipur, Madhya Pradesh 473112, India', 'New Bachelor Hostel (NBH) is a lodging located in Vijaipur, Madhya Pradesh. The average rating of this place is 4.30 out of 5 stars. The street address of this place is F563+CQ2, Gail Vijaipur, Vijaipur, Madhya Pradesh 473112, India. It is about 1.56 kilometers away from the Radhogarh railway station.', 'male', 8500, 4.2, 3.9, 4.6),
 (6, 3, 'Hotel Prakash', 'Mumbai - Agra National Hwy, Raghogarh -Vijaypur, Vijaipur, Madhya Pradesh 473226', 'Furnished studio apartment - share it with close friends! Located in posh area of Bijwasan in Delhi, this house is available for both boys and girls. Go for a private room or opt for a shared one and make it your own abode. Go out with your new friends - catch a movie at the nearest cinema hall or just chill in a cafe which is not even 2 kms away. Unwind with your flatmates after a long day at work/college. With a common living area and a shared kitchen, make your own FRIENDS moments. After all, there\'s always a Joey with unlimited supply of food. Remember, all it needs is one crazy story to convert a roomie into a BFF. What\'s nearby/Your New Neighborhood 4.0 Kms from Dwarka Sector- 21 Metro Station.', 'unisex', 5000, 4.3, 3.4, 4.8),
 (7, 3, 'Metro Hotel & Resort', 'AB Road, Entrance, Gail Vijaipur, Near, Raghogarh -Vijaypur, Madhya Pradesh 473226•078699 74538', 'Furnished studio apartment - share it with close friends! Located in posh area of Bijwasan in Delhi, this house is available for both boys and girls. Go for a private room or opt for a shared one and make it your own abode. Go out with your new friends - catch a movie at the nearest cinema hall or just chill in a cafe which is not even 2 kms away. Unwind with your flatmates after a long day at work/college. With a common living area and a shared kitchen, make your own FRIENDS moments. After all, there\'s always a Joey with unlimited supply of food. Remember, all it needs is one crazy story to convert a roomie into a BFF. What\'s nearby/Your New Neighborhood 4.0 Kms from Dwarka Sector- 21 Metro Station.', 'unisex', 6000, 2.9, 3.4, 3.8),
-(8, 4, 'Rajputana Divine', 'Mohanpur, Madhya Pradesh 473111', 'Rajputana Divine is a great option for travellers looking out for guest house in Guna. It is located in Guna.This Guest House stands out as one of the highly recommended guest house in Guna and is recommended by 96% of our guests. Guest House is rated 4.1 out of 5, which is considered as very good. From all the Budget hotels in Guna, Rajputana Divine is very much popular among the tourists. A smooth check-in/check-out process, flexible policies and friendly management garner great customer satisfaction for this property. The Guest House has standard Check-In time as 11:00 AM and Check-Out time as 10:00 AM. It is a couple-friendly property, hence it is absolutely safe for unmarried couples to stay here.', 'unisex', 3500, 3.9, 3.8, 4.9),
-(9, 4, 'Annapurna Prem Hotel & Restaurant', 'Raghogarh -Vijaypur, Mohanpur, Madhya Pradesh 473226', 'Dr. B R Ambedkar Hostel Raghogarh is a student housing center located in Ajroda, Madhya Pradesh. The average rating of this place is 3.90 out of 5 stars. The street address of this place is G52J+PMW, Ajroda, Madhya Pradesh 473110, India. It is about 1.89 kilometers away from the Radhogarh railway station.', 'male', 8000, 4.2, 4.1, 4.5),
+(8, 4, 'Rajputana Divine\n', 'Mohanpur, Madhya Pradesh 473111', 'Rajputana Divine is a great option for travellers looking out for guest house in Guna. It is located in Guna.This Guest House stands out as one of the highly recommended guest house in Guna and is recommended by 96% of our guests. Guest House is rated 4.1 out of 5, which is considered as very good.\n\nFrom all the Budget hotels in Guna, Rajputana Divine is very much popular among the tourists. A smooth check-in/check-out process, flexible policies and friendly management garner great customer satisfaction for this property. The Guest House has standard Check-In time as 11:00 AM and Check-Out time as 10:00 AM. It is a couple-friendly property, hence it is absolutely safe for unmarried couples to stay here.', 'unisex', 5000, 3.9, 3.8, 4.9),
+(9, 4, 'Annapurna Prem Hotel & Restaurant', 'Raghogarh -Vijaypur, Mohanpur, Madhya Pradesh 473226', 'Furnished studio apartment - share it with close friends! Located in posh area of Bijwasan in Delhi, this house is available for both boys and girls. Go for a private room or opt for a shared one and make it your own abode. Go out with your new friends - catch a movie at the nearest cinema hall or just chill in a cafe which is not even 2 kms away. Unwind with your flatmates after a long day at work/college. With a common living area and a shared kitchen, make your own FRIENDS moments. After all, there\'s always a Joey with unlimited supply of food. Remember, all it needs is one crazy story to convert a roomie into a BFF. What\'s nearby/Your New Neighborhood 4.0 Kms from Dwarka Sector- 21 Metro Station.', 'male', 8000, 4.2, 4.1, 4.5),
 (10, 2, 'New Bachelor Hostel (NBH)', 'F563+CQ2, Gail Vijaipur, Vijaipur, Madhya Pradesh 473112, India', 'New Bachelor Hostel (NBH) is a lodging located in Vijaipur, Madhya Pradesh. The average rating of this place is 4.30 out of 5 stars. The street address of this place is F563+CQ2, Gail Vijaipur, Vijaipur, Madhya Pradesh 473112, India. It is about 1.56 kilometers away from the Radhogarh railway station.', 'male', 8500, 4.2, 3.9, 4.6);
 
 -- --------------------------------------------------------
@@ -148,7 +148,7 @@ CREATE TABLE `properties_amenities` (
   `id` int(11) NOT NULL,
   `property_id` int(11) NOT NULL,
   `amenity_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `properties_amenities`
@@ -219,23 +219,33 @@ CREATE TABLE `testimonials` (
   `property_id` int(11) NOT NULL,
   `user_name` varchar(150) NOT NULL,
   `content` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `testimonials`
 --
 
 INSERT INTO `testimonials` (`id`, `property_id`, `user_name`, `content`) VALUES
-(1, 1, 'Ashutosh Gowariker', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
-(2, 1, 'Karan Johar', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
-(3, 2, 'Zoya Akhtar', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
-(4, 2, 'Farhan Akhtar', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
-(5, 2, 'Anurag Kashyap', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
-(6, 3, 'Mira Nair', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
-(7, 3, 'Meghna Gulzar', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
-(8, 4, 'Farah Khan', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
-(9, 5, 'Rajkumar Hirani', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
-(10, 5, 'Sanjay Leela Bhansali', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.');
+(1, 1, 'Lakshya Srivastava', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(2, 1, 'Raghu', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(3, 2, 'Rishabh', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(4, 2, 'Vikas', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(5, 2, 'Ayush Sharma', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(6, 3, 'Prince Singh', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(7, 3, 'Mrinal Rai', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(8, 4, 'Mohini', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(9, 5, 'Sachin Verma', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(10, 5, 'Sanjay Leela Bhansali', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(11, 6, 'Ashutosh Gowariker', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(12, 6, 'Karan Johar', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(13, 7, 'Rishabh', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(14, 7, 'Vikas', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(15, 8, 'Ayush Sharma', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(16, 8, 'Prince Singh', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(17, 9, 'Mrinal Rai', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(18, 9, 'Mohini', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(19, 10, 'Rajkumar Hirani', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.'),
+(20, 10, 'Sachin Verma', 'You just have to arrive at the place, it\'s fully furnished and stocked with all basic amenities and services and even your friends are welcome.');
 
 -- --------------------------------------------------------
 
@@ -251,7 +261,7 @@ CREATE TABLE `users` (
   `phone` varchar(15) NOT NULL,
   `gender` enum('male','female') NOT NULL,
   `college_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
@@ -263,7 +273,10 @@ INSERT INTO `users` (`id`, `email`, `password`, `full_name`, `phone`, `gender`, 
 (3, 'aditya@gmail.com', 'b1b3773a05c0ed0176787a4f1574ff0075f7521e', 'Aditya Sood', '9876543210', 'male', 'Chandigarh University'),
 (4, 'radhika@gmail.com', 'b1b3773a05c0ed0176787a4f1574ff0075f7521e', 'Radhika Bhatia', '9876543210', 'female', 'Delhi University'),
 (10, 'jamestheo@gmail.com', 'ba2fe7a211d3fbae3903afd0c51f9b9474f5369f', 'James Theo', '8488888880', 'male', 'M H University'),
-(12, 'janedoe@email.com', 'e1770cefc174d55219edcab48f3c91905eb5bd9b', 'Jane Doe', '2334949555', 'female', 'ASU');
+(12, 'janedoe@email.com', 'e1770cefc174d55219edcab48f3c91905eb5bd9b', 'Jane Doe', '2334949555', 'female', 'ASU'),
+(13, 'Lakshya1234@gmail.com', '1088b3066085634706bc6dcbea692a27f744b523', 'Lakshya Srivastava', '9532633199', 'male', 'Juet, Guna'),
+(14, 'Prince@Hotmail.com', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', 'Prince Kumar', '9876432150', 'male', 'JUET, Guna'),
+(15, 'Ayush123@gmail.com', '27d60069284ee7b4afab43f64773794c14edcfc3', 'Ayush', '9876543210', 'male', 'JUET, GUNA');
 
 --
 -- Indexes for dumped tables
@@ -337,13 +350,13 @@ ALTER TABLE `cities`
 -- AUTO_INCREMENT for table `interested_users_properties`
 --
 ALTER TABLE `interested_users_properties`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
 
 --
 -- AUTO_INCREMENT for table `properties`
 --
 ALTER TABLE `properties`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `properties_amenities`
@@ -355,13 +368,13 @@ ALTER TABLE `properties_amenities`
 -- AUTO_INCREMENT for table `testimonials`
 --
 ALTER TABLE `testimonials`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
